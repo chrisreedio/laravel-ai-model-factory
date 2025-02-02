@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace ChrisReedIO\AIModelFactory\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class AIModelFactoryCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-ai-model-factory';
 
     public $description = 'My command';
 
