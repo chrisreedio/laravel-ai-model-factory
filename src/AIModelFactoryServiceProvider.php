@@ -18,7 +18,7 @@ class AIModelFactoryServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-ai-model-factory')
             ->hasConfigFile()
-            ->hasViews()
+            ->hasViews('ai-model-factory')
             ->hasMigration('create_laravel_ai_model_factory_table')
             ->hasCommand(AIModelFactoryCommand::class);
     }
