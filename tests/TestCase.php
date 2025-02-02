@@ -2,9 +2,9 @@
 
 namespace ChrisReedIO\AIModelFactory\Tests;
 
+use ChrisReedIO\AIModelFactory\AIModelFactoryServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use ChrisReedIO\AIModelFactory\AIModelFactoryServiceProvider;
 
 class TestCase extends Orchestra
 {

@@ -2,9 +2,9 @@
 
 namespace ChrisReedIO\AIModelFactory;
 
+use ChrisReedIO\AIModelFactory\Commands\AIModelFactoryCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use ChrisReedIO\AIModelFactory\Commands\AIModelFactoryCommand;
 
 class AIModelFactoryServiceProvider extends PackageServiceProvider
 {
