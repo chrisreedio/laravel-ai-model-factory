@@ -5,9 +5,7 @@ namespace ChrisReedIO\AIModelFactory\Traits;
 use ChrisReedIO\AIModelFactory\Contracts\AIFactoryInterface;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
-
 use InvalidArgumentException;
-
 use ReflectionEnum;
 
 use function class_implements;
@@ -25,7 +23,7 @@ trait HasJsonSchema
         /* @var class-string $model */
         $modelClass = static::class;
         /* @var Model|AIFactoryInterface $model */
-        $model = new static();
+        $model = new static;
 
         // If the model does not implement the AIFactoryInterface, throw an exception
         if (! in_array(AIFactoryInterface::class, class_implements($model))) {
@@ -136,9 +134,6 @@ trait HasJsonSchema
 
     /**
      * Check if a class is an enum.
-     *
-     * @param string $className
-     * @return bool
      */
     private static function isEnum(string $className): bool
     {
@@ -152,7 +147,7 @@ trait HasJsonSchema
     /**
      * Determine if a relationship returns a single model or a collection.
      *
-     * @param string $relationName The name of the relationship.
+     * @param  string  $relationName  The name of the relationship.
      * @return bool True if the relationship returns a single model, false if it returns a collection.
      */
     public static function isSingleRelation(string $relationName): bool
@@ -179,7 +174,7 @@ trait HasJsonSchema
                 'name' => static::getResponseName(),
                 'schema' => static::generateJsonSchema(),
                 'strict' => true,
-            ]
+            ],
         ];
     }
 
@@ -188,4 +183,3 @@ trait HasJsonSchema
         return strtolower(class_basename(static::class)).'_response';
     }
 }
-
